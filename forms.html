@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms</title>
+    <style>
+        input[type=text] {
+            border: 2px solid lawngreen;
+            border-radius: 4px;
+        }
+        input[type=password] {
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+        #user {
+            color:blue;
+        }
+        #password {
+            color: aquamarine;
+        }
+        #comment {
+            color: coral;
+        }
+        #sub {
+            border-color: brown;
+        }
+        #res {
+            color: blueviolet;
+        }
+        input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #ffa500;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+        input[type='checkbox']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: fuchsia;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        input[type='checkbox']:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: black;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+        .dropbtn {
+            background-color: burlywood;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+
+    </style>
+</head>
+<body>
+    <form action="http://example.com/join.php" method="post">
+        <p> Username:
+        <input type="text" name="username" id="user"
+               size="15" maxlength="7">
+        </p>
+        <p> Password:
+           <input type="password" name="username" id="password"
+                   size="15" maxlength="7">
+            </style
+        </p>
+        <p>
+            <textarea name="comment" id="comment" cols="30" rows="10">Whats ya major playa?</textarea>
+        </p>
+        <p>
+
+            <input type="radio" name="major" value="IS" /> IS
+            <input type="radio" name="major" value="Acct" /> Acct
+            <input type="radio" name="major" value="Fin" /> Fin
+            <input type="radio" name="major" value="Fin" /> Marketing
+            <input type="radio" name="major" value="Fin" /> Management
+            <input type="radio" name="major" value="Fin" /> IB
+
+            <br/>
+            <br/>
+            <input type="checkbox" name="majorK" value="IS" /> IS
+            <input type="checkbox" name="majorK" value="Acct" /> Acct
+            <input type="checkbox" name="majorK" value="Fin" /> Fin
+            <input type="checkbox" name="majorK" value="Fin" /> Marketing
+            <input type="checkbox" name="majorK" value="Fin" /> Management
+            <input type="checkbox" name="majorK" value="Fin" /> IB
+
+            <br/>
+            <br/>
+            <select name="major" class="dropbtn">
+               <option value="IS" selected="selected" >IS</option>
+                <option value="Mktg">Accounting</option>
+               <option value="Acct">Marketing</option>
+               <option value="Finance">Finance</option>
+                <option value="Finance">Marketing</option>
+                <option value="Finance">Management</option>
+                <option value="Finance">International Business</option>
+                <option value="other">Other</option>
+            </select>
+
+            <br>
+        <p> Insert your resume: </p>
+            <input type="file" name="resume" id="res"/>
+            <input type="submit" value="Submit" id="sub" />
+        </p>
+    </form>
+
+</body>
+</html>
